@@ -78,6 +78,16 @@
 
 Refer : [iPAS經濟部產業人才能力鑑定-資訊安全工程師-鑑定制度與評鑑內容](https://www.ipas.org.tw/ise/AbilityPageContent.aspx?mnuno=675cfae7-387b-4a6d-a4b8-f15a78bb10d4&pgeno=092c80f2-3f12-495b-b8d5-75feb46bd3c8)
 
+> 額外補充\
+> 工研院有提供免費的影音課程 可以註冊並加入會員後觀看iPAS數位課程及測驗\
+> 非常推薦大家去看去使用 註冊連結幫大家準備在下方 Refer 了\
+> ( 不過 不知道為什麼沒有【滲透測試、源碼測試、資安健診】的單元就是了
+
+Refer : [iPAS數位課程平台入口網址](https://collegeplus.itri.org.tw)
+
+![Untitled](Appendix-img/ITRI_Courses_and_Tests.png) <br>
+▲ Fig.ITRI_Courses_and_Tests.
+
 </br>
 
 ## 證書效期與換發
