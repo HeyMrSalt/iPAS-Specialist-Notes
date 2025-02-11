@@ -95,10 +95,9 @@ Refer : [iPAS經濟部產業人才能力鑑定-資訊安全工程師-證書效�
 ## 數發部-資通安全專業證照清單
 > 資通安全專業證照清單（1140124修正）
 
-![Untitled](Appendix-img/Certificate_Certification_List.png) <br>
-▲ Fig.Certificate_Certification_List
+![Untitled](Appendix-img/Certificate_Certification_List_1140124.png) <br>
+▲ Fig.Certificate_Certification_List_1140124
 
-Refer : https://moda.gov.tw/ACS/laws/certificates/676
 Refer : [數位發展部資通安全署-資安專業證照清單](https://moda.gov.tw/ACS/laws/certificates/676)
 
 ---
