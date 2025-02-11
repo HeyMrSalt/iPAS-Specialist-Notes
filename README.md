@@ -500,7 +500,7 @@ Protect 功能的目的是開發和實施適當的保障措施,以確保關鍵�
 |                        | Slow Attacks <br>(緩慢攻擊)         | 利用緩慢請求來耗盡目標的資源              | 消資源      |
 |                        | HTTP(s) Flood <br>(HTTP 洪水攻擊)      | 通過大量 HTTP(s) 請求造成網絡服務過載      | 消資源      |
 |                        | POST/GET 大量請求攻擊     | 通過大量 POST/GET 請求造成網絡服務過載      | 消資源      |
-|                        | ReDoS <br>(Regular Expression Denial of Service)      | 通過設計特定正則表達式<br>匹配負載使目標 CPU 過度消耗   | 消資源      |
+|                        | ReDoS <br>(Regular Expression Denial of Service)      | 通過設計特定正則表達式匹配負載使目標 CPU 過度消耗   | 消資源      |
 |                        |        |        |        |
 | **Presentation Layer <br>表示層 Layer6** | TLS Attacks <br>(Incomplete TLS Session) <br>(TLS 層攻擊 - 不完整 TLS 會話) | 利用不完整的 TLS 會話來消耗目標資源       | 消資源      |
 |                        |        |        |        |
