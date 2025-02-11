@@ -619,7 +619,10 @@ Refer : https://www.incibe.es/en/incibe-cert/blog/cvss-v40-steps-advanced-vulner
 我們也可以從 CVE 時間看到 2022 的 CVE 就會是 3.1 的版本 數據上就像是下圖這樣\
 這是一個 橢圓曲線簽章演算法 在 Java 上面出現的漏洞\
 漏洞編號為 : CVE-2022-21449\
-而你能看到 CVSS 3.0 分數為 : 7.5 HIGH
+而你能看到 CVSS 3.x 分數為 : 7.5 HIGH
+
+![Untitled](Appendix-img/CVE-2022-21449.png) <br>
+▲ Fig.CVE-2022-21449
 
 ![Untitled](Appendix-img/Psychic-Signatures-CVE.png) <br>
 ▲ Fig.Psychic-Signatures-CVE
@@ -631,8 +634,8 @@ Refer : https://ithelp.ithome.com.tw/articles/10304518
 漏洞編號為 : CVE-2025-24479\
 而你能看到 CVSS 4.0 分數為 : 8.6 HIGH
 
-![Untitled](Appendix-img/CVSS_v4.png) <br>
-▲ Fig.CVSS_v4.png
+![Untitled](Appendix-img/CVE-2025-24479.png) <br>
+▲ Fig.CVE-2025-24479.png
 
 Refer : https://nvd.nist.gov/vuln/detail/CVE-2025-24479
 
