@@ -607,8 +607,10 @@ Refer : https://www.ithome.com.tw/news/166386
 
 CVSS 4.0 是在 2023 年 11 月 1 日 FIRST 正式發布了 CVSS 4.0\
 這個全新版本距離上一版 CVSS v3.0 已經過去了八年 是業界與組織單會參考的一種指標\
-CVSS 是評估軟體安全漏洞 "嚴重性" 的標準化框架，根據可攻擊性、保密性、完整性、可用性和所需許可權的影響等因素進行評分\
-以「低(low)、中(medium)、高(high)和嚴重(Critical)」等級標示，最終分數越高表示漏洞越嚴重，有助於設定優先順序來應對\
+CVSS 是評估軟體安全漏洞 "嚴重性" 的標準化框架\
+根據可攻擊性、保密性、完整性、可用性和所需許可權的影響等因素進行評分\
+以「低(low)、中(medium)、高(high)和嚴重(Critical)」等級標示\
+最終分數越高表示漏洞越嚴重，有助於設定優先順序來應對
 
 FIRST表示，這版 CVSS4.0 增加了幾個補充指標\
 包括Automatable (wormable蠕蟲化) , Recovery (resilience韌性), Value Density影響性,\
