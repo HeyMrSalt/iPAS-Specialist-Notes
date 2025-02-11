@@ -47,7 +47,8 @@
   - [【SIEM vs IDS】](#siem-vs-ids)
   - [【APT 名詞說明 以及 常用技術手法】](#apt-名詞說明-以及-常用技術手法)
   - [【OWASP Top 10 的詳細解釋】](#owasp-top-10-的詳細解釋)
-  - [【DDoS攻擊種類之對應OSI層級】](#ddos攻擊種類之對應osi層級) 
+  - [【DDoS攻擊種類之對應OSI層級】](#ddos攻擊種類之對應osi層級)
+  - [【CVSS】](#cvss)
 - [【Refer】](#refer)
 
 ---
@@ -206,6 +207,8 @@ Base（基本度量），Temporal（時間度量），Environmental（環境度�
 Refer : https://www.first.org/cvss/v4-0
 
 因此選 (A)(D) 
+
+本筆記這處也有提到相關資訊 點擊查看更多學習資訊 [【CVSS】](#cvss)
 
 ---
 </br>
