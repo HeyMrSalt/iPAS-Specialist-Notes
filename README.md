@@ -55,6 +55,7 @@
 ### 鑑定制度架構
 
 [Fig.Appraisal_System_Structure]
+![Untitled](../Appendix-img/Appraisal_System_Structure.png)
 
 懶人包 : 兩個都要70分才有證照，若一科過一科沒過，下次可只考沒過的那科 (限三年內)
 
