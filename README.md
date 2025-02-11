@@ -597,9 +597,55 @@ Protect 功能的目的是開發和實施適當的保障措施,以確保關鍵�
 Refer : https://www.ithome.com.tw/news/166386
 
 ---
+</br>
+
+## cvss
+>  有分成 V3 V4 (V3 is 3.0 3.1) (V4 is 4.0)
+
+CVSS 4.0 是在 2023 年 11 月 1 日 FIRST 正式發布了 CVSS 4.0\
+這個全新版本距離上一版 CVSS v3.0 已經過去了八年 是業界與組織單會參考的一種指標\
+CVSS 是評估軟體安全漏洞 "嚴重性" 的標準化框架，根據可攻擊性、保密性、完整性、可用性和所需許可權的影響等因素進行評分\
+以「低(low)、中(medium)、高(high)和嚴重(Critical)」等級標示，最終分數越高表示漏洞越嚴重，有助於設定優先順序來應對\
+
+FIRST表示，這版 CVSS4.0 增加了幾個補充指標\
+包括Automatable (wormable蠕蟲化) , Recovery (resilience韌性), Value Density影響性,\
+Vulnerability Response Effort漏洞回應力度和及Provider Urgency緊迫性等
+
+![Untitled](Appendix-img/CVSSv3tov4.png) <br>
+▲ Fig.CVSSv3tov4
+
+Refer : https://www.incibe.es/en/incibe-cert/blog/cvss-v40-steps-advanced-vulnerability-assessment
+
+我們也可以從 CVE 時間看到 2022 的 CVE 就會是 3.1 的版本 數據上就像是下圖這樣\
+這是一個 橢圓曲線簽章演算法 在 Java 上面出現的漏洞\
+漏洞編號為 : CVE-2022-21449\
+而你能看到 CVSS 3.0 分數為 : 7.5 HIGH
+
+![Untitled](Appendix-img/Psychic-Signatures-CVE.png) <br>
+▲ Fig.Psychic-Signatures-CVE
+
+Refer : https://ithelp.ithome.com.tw/articles/10304518
+
+接下來這個漏洞是 2025 的 CVE 數據上就像是下圖這樣\
+是一個 Windows 的預設設定所造成的漏洞，這漏洞允許以更高權限的使用者身分存取命令提示字元
+漏洞編號為 : CVE-2025-24479\
+而你能看到 CVSS 4.0 分數為 : 8.6 HIGH
+
+![Untitled](Appendix-img/CVSS_v4.png) <br>
+▲ Fig.CVSS_v4.png
+
+Refer : https://nvd.nist.gov/vuln/detail/CVE-2025-24479
+
+且 FIRST 還在 2022年發佈了 TLP 2.0，這是電腦安全事件回應小組（CSIRT）社群在共用敏感資訊時使用的最新版燈號協定（TLP）標準
+
+Refer : https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=10782
 
 ---
+</br>
 
+
+---
+---
 ---
 
 # refer
