@@ -181,7 +181,7 @@ Refer : https://www.datamation.com/security/nessus-vs-nmap
 \
 Ans : (A)(D)\
 \
-原因如下：
+原因如下：\
 (A) 錯誤的地方在於 CVSS 的主要目的是評估和傳達弱點的嚴重性（Severity），而非風險程度（Risk Level）\
 嚴重性評估的是弱點本身的內在特性，如攻擊複雜度、影響範圍等；風險程度則需要考慮更多因素，包括威脅可能性、資產價值和控制措施等\
 \
@@ -215,7 +215,12 @@ Refer : https://www.first.org/cvss/v4-0
 
 ## 113-1 中級 防護實務
 
-### Q1. 關於 MITRE ATT&CK 中的憑證存取（Credential Access）戰術（Tactic），下列何項錯誤？
+- [【Q1】](#113-1-Q1)
+- [【Q5】](#113-1-Q5)
+- [【Q14】](#113-1-Q14)
+
+### 113-1-Q1
+關於 MITRE ATT&CK 中的憑證存取（Credential Access）戰術（Tactic），下列何項錯誤？\
 (A) 中間人攻擊（Adversary-in-the-Middle）屬於此類戰術\
 (B) 暴力破解攻擊（Brute Force）屬於此類戰術\
 (C) 密碼政策探索（Password Policy Discovery）屬於此類戰術\
@@ -225,19 +230,28 @@ Ans : (C)\
 \
 在 MITRE ATT&CK 框架中，憑證存取（Credential Access）戰術涉及攻擊者使用多種方法來偷取資料和證書，通常用於身份驗證和授權。\
 \
-(A) 中間人攻擊（Adversary-in-the-Middle）屬此戰術：這是正確的，因為攻擊者在此類攻擊中可能會攔截和竊取認證。\
-(B) 暴力破解攻擊（Brute Force）屬類戰術：這也是正確的，因為暴力破解是一種常見的方法，用來嘗試許多密碼以獲取訪問權限。\
-(C) 密碼政策探索（Password Policy Discovery）屬此戰術：這是錯的，密碼政策探索偏向於獲取有關系統密碼政策信息，而非直接存取憑證。\
-(D) 變造網站憑證（Forge Web Credentials）屬此戰術：這是正確的，製造假的網站憑證是一種直接涉及憑證存取的攻擊方法。\
+(A) 中間人攻擊（Adversary-in-the-Middle）屬此戰術\
+這是正確的，因為攻擊者在此類攻擊中可能會**攔截**和**竊取**認證。\
+(B) 暴力破解攻擊（Brute Force）屬類戰術\
+這也正確，因為暴力破解是一種常見的方法，用來嘗試許多密碼以獲取訪問權限。\
+(C) 密碼政策探索（Password Policy Discovery）屬此戰術\
+這是錯的，密碼政策探索偏向於獲取有關系統密碼政策信息，而非直接存取憑證。\
+(D) 變造網站憑證（Forge Web Credentials）屬此戰術\
+這是正確的，製造假的網站憑證是一種直接涉及憑證存取的攻擊方法。\
 因此選項 **(C)** 是錯誤的。\
 \
 Refer :　https://www.netscout.com/what-is-mitre-attack/credential-access
 
+```diff
+! 補充：中間人攻擊 縮寫也稱 MITM/MiTM 或 AITM/AiTM
+```
+
+[待更新] 本筆記這處也有提到相關資訊 點擊查看更多學習資訊 [【中間人攻擊】](#mitm)
+
 ---
 </br>
 
-### Q5.【題組】 情境如附圖所示。駭客首先在 WSL 環境中部署了一個專門編寫的惡意 script，該 script 旨在利用 Windows 與 WSL 之間的互操作性漏洞。請問其目的，最有可能是下列何項？（請選一個最合適的答案）
-
+【題組】情境如下
 ```
 在 TechSecure Inc.，一家前沿的科技安全公司，資安團隊面臨著一項前所未有的挑戰。
 隨著開發團隊需要更多的彈性和功能來進行軟體開發，公司決定在其開發環境中採用 Windows Subsystem for Linux 2 (WSL2)。
@@ -250,6 +264,9 @@ Refer :　https://www.netscout.com/what-is-mitre-attack/credential-access
 這個團隊本專門設計來利用 WSL2 環境中的漏洞，目標是獲取公司的敏感數據和內部系統的控制權。
 駭客計劃藉著利用 Windows Subsystem for Linux (WSL) 來進行網絡入侵。
 ```
+
+### 113-1-Q5
+【題組】駭客首先在 WSL 環境中部署了一個專門編寫的惡意 script，該 script 旨在利用 Windows 與 WSL 之間的互操作性漏洞。請問其目的，最有可能是下列何項？（請選一個最合適的答案）\
 (A) 在 Windows 創立一個隱藏的管理員帳戶，以便未來存取\
 (B) 為了直接加密 Windows 系統文件，進行勒索軟體攻擊\
 (C) 通過 WSL 環境檢索並傳送 Windows 系統日誌，以分析可能的弱點\
@@ -267,7 +284,8 @@ Ans : (D)\
 ---
 </br>
 
-### Q14. 根據 NIST Cybersecurity Framework 中的 Protect 功能，下列哪些項目是組織實施此功能時應考慮的關鍵要素？
+### 113-1-Q14
+【複選】根據 NIST Cybersecurity Framework 中的 Protect 功能，下列哪些項目是組織實施此功能時應考慮的關鍵要素？
 (A) 實施身份管理及存取控制\
 (B) 執行資料加密和保護\
 (C) 建立災難復原程序\
