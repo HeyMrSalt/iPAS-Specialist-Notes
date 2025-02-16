@@ -852,9 +852,11 @@ Refer : https://accelera.com.au/what-the-sec-is-devsecops/
 ```
 
 - 資安業者Any.Run分析資訊\
-https://any.run/report/bdfc66266a2a19fc3d5dccef3eefe4c0ee928ba5b7abad60bc320218b2082fea/c85587f9-3782-4ebd-8204-b0e921374679
+[https://any.run/report](https://any.run/report/bdfc66266a2a19fc3d5dccef3eefe4c0ee928ba5b7abad60bc320218b2082fea/c85587f9-3782-4ebd-8204-b0e921374679)
 
-從這個事件我們可以認識幾個專有名詞
+```diff
+! 從這個事件我們可以認識幾個專有名詞
+```
 
 ### AD
 
@@ -888,7 +890,7 @@ Refer : https://www.ithome.com.tw/news/151458
 
 ## windows使用者介面零時差漏洞
 > Feb 14, 2025
-> [https://www.ithome.com.tw/news/167327](https://www.ithome.com.tw/news/167383)
+> https://www.ithome.com.tw/news/167383
 
 ---
 </br>
