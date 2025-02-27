@@ -1,4 +1,4 @@
-# iPAS資安工程師中級 | 防護實務衝刺班 | 證照筆記 | Ver.20250211 [![Hits](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes.svg)](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes/)
+# iPAS資安工程師中級 | 防護實務衝刺班 | 證照筆記 | Ver.20250227 [![Hits](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes.svg)](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes/)
 > 此 repository 為 iPAS 資安工程師 中級證照筆記。\
 > 範圍將著重在【防護實務】並以【歷屆難題與解析】與【名詞工具重點說明】方式呈現。
 
