@@ -3,7 +3,7 @@
 > 範圍將著重在【防護實務】並以【歷屆難題與解析】與【名詞工具重點說明】方式呈現。
 
 ## Authors
-> 國立臺北科技大學 資安碩 HeyMrSalt 🧂\
+> 國立臺北科技大學 資安碩 [HeyMrSalt](https://github.com/HeyMrSalt) 🧂\
 > 國立臺北科技大學 資安碩 [WIFI](https://github.com/WIFI0000)\
 > 國立臺北科技大學 資安碩 [Adb2](https://github.com/xAdb2)\
 > 國立臺北科技大學 資安碩 [Paul](https://github.com/paulwang19)\
@@ -59,6 +59,7 @@
   - [【DDoS攻擊種類之對應OSI層級】](#ddos攻擊種類之對應osi層級)
   - [【CVSS】](#cvss)
   - [【SSDLC vs DevSecOps】](#ssdlc-vs-devsecops)
+  - [【SQL injection 類型】](#sql-injection-類型)
 - [【用資安新聞學資安名詞】](#用資安新聞學資安名詞)
 - [【Refer】](#refer)
 
@@ -463,6 +464,7 @@ Ans : (C)\
 - [【DDoS攻擊種類之對應OSI層級】](#ddos攻擊種類之對應osi層級)
 - [【CVSS】](#cvss)
 - [【SSDLC vs DevSecOps】](#ssdlc-vs-devsecops)
+- [【SQL injection 類型】](#sql-injection-類型)
 - [【待更新-中間人攻擊MITM】](#中間人攻擊mitm)
 - [【魚叉式網釣】](#魚叉式網釣)
 - [【待更新-0-day零時差漏洞】](#0-day零時差漏洞)
@@ -758,6 +760,10 @@ Refer : ChatGPT_o1
 
 ## DDoS攻擊種類之對應OSI層級
 
+首先能先知道 造成這類攻擊不外乎都源自這兩大致命處【資源耗竭】跟【頻寬耗竭】<br>
+一個是使系統一直處於運算<br>
+另一則是使系統一直處於接收或傳送封包
+
 | OSI 層級               | 攻擊類型                        | 攻擊描述                          | 攻擊方式      |
 |------------------------|----------------------------------|-----------------------------------|--------------|
 | **Application Layer <br>應用層 Layer7** | DNS Flooding<br>/DNS NXDOMAIN Flood<br>(DNS 洪水攻擊) | 利用大量無效的 DNS 查詢造成網絡過載       | 佔頻寬      |
@@ -879,6 +885,35 @@ Refer : https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=1
 ▲ Fig.DevSecOps_Security_Control
 
 Refer : https://accelera.com.au/what-the-sec-is-devsecops/
+
+---
+</br>
+
+## sql injection 類型
+> 各類型已整理成下圖
+
+![Untitled](Appendix-img/SQL_Type.png) <br>
+▲ Fig.SQL_Type
+
+### Quick Review
+
+Q. 請問這是屬於哪種類型
+```
+' OR 1 = 1 --
+```
+
+A: 這個經典的 SQL Injection Payload 是屬於 In-band 的類型<br>
+但至於要再細分是 Error-Based 還是 Union-Based 的話
+
+- Error-Based 攻擊者通常會利用回傳的錯誤訊息來推敲資料
+- Union-Based 則是藉由 UNION SELECT 來將額外資料拼接到查詢回傳的結果中
+
+而這串 Payload 並沒有去使用錯誤訊息，也沒有使用 UNION SELECT<br>
+只是簡單地造成條件永遠為 True 的「Tautology」<br>
+因此它不算是 Error-Based，也不是 Union-Based<br>
+但屬於 In-band 的沒錯
+
+*Tautology : 在邏輯學中指的是恆真式，也就是無論如何判斷、結果都為「真（True）」的敘述
 
 ---
 </br>
