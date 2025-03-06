@@ -1,3 +1,8 @@
+<!--
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
+-->
+
 # iPAS資安工程師中級 | 防護實務衝刺班 | 證照筆記 | Ver.20250227 [![Hits](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes.svg)](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes/)
 > 此 repository 為 iPAS 資安工程師 中級證照筆記。\
 > 範圍將著重在【防護實務】並以【歷屆難題與解析】與【名詞工具重點說明】方式呈現。
@@ -45,7 +50,7 @@
 
 </br>
 
-# 目錄 TOC
+# 目錄
 - [【官方資訊】](#官方資訊)
 - [【歷屆難題與解析】](#歷屆難題與解析)
   - [【113-2 中級 防護實務】](#113-2-中級-防護實務)
@@ -1062,5 +1067,12 @@ Refer : https://ithelp.ithome.com.tw/articles/10333769
 3. [iPAS資訊安全工程師中級筆記 - @dkri3c1](https://hackmd.io/@dkri3c1/r1jWTXCtA)
 4. [iPAS資訊安全工程師中級筆記 - @Not](https://hackmd.io/@Not/iPASInformationSecuritySpecialist)
 5. [iPAS資訊安全工程師-中級-12天準備歷程記錄&考古題資源提供 - @Bad Mind](https://hackmd.io/@7ZcmfE2ETz-ntel2Ma6uTg/ByhWE-qs2)
+6. [iPAS 資安法規及標準筆記 - @ywc](https://hackmd.io/@ywChen/H192F7VPC/https%3A%2F%2Fhackmd.io%2F%40ywChen%2FS1wHQ5EcC)
+7. [CISSP 資安獨孤九劍 - @hpsh31323](https://hackmd.io/@hpsh31323/rk3mgXD7p#CISSP-%E8%B3%87%E5%AE%89%E7%8D%A8%E5%AD%A4%E4%B9%9D%E5%8A%8D)
+8. [iThome](https://www.ithome.com.tw/) 
 
 ---
+
+###### tags: `資安證照` `iPAS中級資安工程師` 
+
+[【Go Top】](#iPAS資安工程師中級-|-防護實務衝刺班-|-證照筆記-|-Ver.20250227)
