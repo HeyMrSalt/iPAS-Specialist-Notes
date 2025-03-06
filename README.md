@@ -63,7 +63,7 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-nc
   - [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
   - [【DDoS攻擊種類之對應OSI層級】](#DDoS攻擊種類之對應OSI層級)
   - [【CVSS】](#CVSS)
-  - [【SSDLC vs DevSecOps】](#SSDLC-vs-DevSecOps
+  - [【SSDLC vs DevSecOps】](#SSDLC-vs-DevSecOps)
   - [【SQL injection 類型】](#SQL-injection-類型)
   - [【待更新-中間人攻擊MITM】](#中間人攻擊MITM)
   - [【魚叉式網釣】](#魚叉式網釣)
@@ -904,8 +904,8 @@ Refer : https://accelera.com.au/what-the-sec-is-devsecops/
 ## SQL injection 類型
 > 各類型已整理成下圖
 
-![Untitled](Appendix-img/SQL_Type.png) <br>
-▲ Fig.SQL_Type
+![Untitled](Appendix-img/SQL_Types.png) <br>
+▲ Fig.SQL_Types
 
 ### Quick Review
 
@@ -1032,13 +1032,21 @@ Windows 的數位簽章\
 這按鈕像是防禦開關，就是常被用於 BYOVD 攻擊的驅動程式所做的黑名單，\
 只要開啟這項保護，在黑名單的驅動程式就算有簽章也會被擋住而無法載入。
 
+![Untitled](Appendix-img/Windows_Core_Isolation.png) <br>
+▲ Fig.Windows_Core_Isolation
+
 通常攻擊者成功提權，即獲取 Kernel 層級，\
 即可在核心層級進行操作，可能繞過許多防毒、EDR 等安全防護。\
 在最高權限下進一步橫向移動、植入惡意程式或進行其他攻擊行為。
 
-更多關於 BYOVD 細節與資訊可以看 大神zeze 在 iThome 所撰寫的\
-來自核心－烈日的 Windows系列 第 20 篇\
-【第 20 話】BYOVD 攻擊
+![Untitled](Appendix-img/BYOVD_Attack_from_Zeze.png) <br>
+▲ Fig.BYOVD_Attack_from_Zeze
+
+這圖是來自 大神Zeze 在 iThome 2023 所撰寫的\
+**來自核心－烈日的 Windows** 系列文章【第 20 話】BYOVD 攻擊\
+很精采 推薦大家有興趣一定要去看\
+裡頭除了關於 BYOVD 更多細節與資訊\
+系列文章前面從 Kernel 層概觀 講到 WFP 隱藏流量，好文必須用力推一個
 
 Refer : https://ithelp.ithome.com.tw/articles/10333769
 
@@ -1047,7 +1055,27 @@ Refer : https://ithelp.ithome.com.tw/articles/10333769
 ### Any.Run
 
 什麼是Any.Run？\
-**Any.Run** 是一個提供「互動式惡意程式分析」的線上平台，主要特色為：  
+**Any.Run** 是一個提供「互動式惡意程式分析」的線上平台\
+讓使用者能在受控的虛擬環境中動態觀察及分析惡意程式的行為。
+
+口語的來說就是\
+你可以把可疑程式丟進去，然後在安全環境裡直接看它到底做些什麼\
+換句話說，它能夠互動式地分析病毒或惡意程式，不用擔心會影響真實系統。\
+Any.Run 的畫面大致如下
+
+![Untitled](Appendix-img/ANY_RUN.png) <br>
+▲ Fig.ANY_RUN
+
+Refer : https://any.run/
+
+Any.Run 其主要特色包括：
+
+- 互動式分析：使用者可在惡意程式運行期間直接與環境互動，不僅僅依賴預先產生的報告，從而更深入地了解程式的行為模式
+- 實時監控：平台提供即時數據與事件監控，追蹤惡意程式在執行過程中的網路連線、系統修改、檔案操作等動作
+- 詳細報告：在分析結束後，系統會生成包含系統活動、進程、網路流量等詳細資訊的報告，方便後續的安全研究與取證工作
+- 雲端運算平台：由於基於雲端運算，使用者無需自行建置虛擬機器環境，就能輕鬆進行惡意程式分析，節省資源與時間
+
+這些特色使得 Any.Run 成為安全研究人員、資安分析師及事件回應團隊在研究及應對惡意程式時的重要工具
 
 </br>
 
@@ -1058,12 +1086,91 @@ Refer : https://ithelp.ithome.com.tw/articles/10333769
 > Feb 14, 2025
 > https://www.ithome.com.tw/news/167383
 
+以下來自 iThome新聞
+> https://www.ithome.com.tw/news/167379
+
+```
+2025年2月，駭客 Mustang Panda 積極利用此漏洞，進一步掩蓋攻擊痕跡。
+由威脅情報業者 ClearSky Cyber Security 於 02 月 13 日發現並提出警告
+
+- ClearSky Cyber Security 發現 Windows 作業系統 GUI 存在零時差漏洞（尚未登記 CVE 編號）
+  雖然通報後微軟評估為低風險弱點，但已出現遭駭客積極利用的情況
+
+- 這項弱點涉及檔案總管處理RAR壓縮檔的過程，由於微軟在2023年10月開始對Windows 11 22H2加入相關功能
+  這代表曝險範圍可能是執行Windows 11及Windows Server 2025的工作站電腦及伺服器
+
+- 駭客利用 RAR檔內含隱藏屬性檔案，利用命令列解壓到隱藏資料夾，使該資料夾在檔案總管與命令提示字元中均看不見
+  就連使用者透過命令提示字元下達 dir 指令，也不會出現
+```
+
+</br>
+
+以下來自 ClearSky Cyber Security 在 X 上的發布
+> https://x.com/ClearskySec/status/1890056915230544224
+
+```
+ClearSky Cyber Security has discovered a UI vulnerability in Microsoft Windows.
+This vulnerability is actively exploited by a suspected Chinese APT group - Mustang Panda.
+
+When files are extracted from compressed “RAR” files they are hidden from the user.
+If the compressed files are extracted into a folder, the folder appears empty in the Windows Explorer GUI.
+
+When using the "dir" command to list all files and folders inside the target folder,
+the extracted files and folders are "invisible/hidden" to the user.
+
+Threat actors or users can also execute those compressed files from a command line prompt,
+if they know the exact path. As a result of executing "attrib -s -h" to  system protected files,
+an unknown file type is created from the type "Unknown" ActiveX component.
+
+More details will be published in our blog.
+Microsoft classified it as a low-severity vulnerability.
+
+MD5: 3bd2eeda66ec057727be8810fee5da38
+```
+
+![Untitled](Appendix-img/ClearSky_Windows_UI_0day.png) <br>
+▲ Fig.ClearSky_Windows_UI_0day
+
+```diff
+! 從這個事件我們可以認識幾個專有名詞
+```
+
+### APT Group
+APT Group (進階持續性威脅團隊)\
+我想直接來看 下方連結 就可以理解了 只不過他們是個組織團隊\
+【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
+
+</br>
+
+### dir Command
+是一個在 Windows 命令提示字元中使用的指令，用來列出指定目錄下所有檔案與資料夾\
+但由於漏洞，利用此指令也看不到那些隱藏的檔案
+
+</br>
+
+### ActiveX Component
+是微軟的一個軟體元件架構，允許不同的應用程式在 Windows 平台上互相溝通與執行特定功能\
+文章中提到因指令操作而產生的「Unknown ActiveX 元件」代表了異常行為
+
+</br>
+
+### MD5
+MD5 是一種加密雜湊演算法，可用於生成檔案的唯一摘要值（雜湊值），常用來驗證檔案完整性\
+文章中提供的 MD5 值可用來辨識或比對檔案內容\
+不過要知道 現在嚴格來說 MD5 早已經不安全了\
+被證實是可以被破解了，存在**碰撞漏洞**，主要就是因為攻擊者能夠利用其碰撞弱點，找到兩個不同的輸入資料卻得到相同的雜湊\
+這代表著 MD5 的設計中存在缺陷，不再適合作為安全的加密雜湊演算法，尤其在需要防範惡意攻擊的情境下
+
+Refer : https://hoploninfosec.com/windows-ui-vulnerability-exploited/
+
 ---
 </br>
 
 ---
 ---
 ---
+
+</br>
 
 # Refer
 
@@ -1080,10 +1187,15 @@ Refer : https://ithelp.ithome.com.tw/articles/10333769
 
 ---
 
-###### tags: `資安證照` `iPAS中級資安工程師` 
+</br>
 
+# 回到目錄
 [【Go Top】](#目錄)
 
+</br>
 
-This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></br>
-To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
+###### tags: `資安證照` `iPAS中級資安工程師` 
+
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/</br>
+[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
