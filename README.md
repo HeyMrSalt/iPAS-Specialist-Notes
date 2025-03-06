@@ -66,7 +66,7 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-nc
   - [【SSDLC vs DevSecOps】](#ssdlc-vs-devsecops)
   - [【SQL injection 類型】](#sql-injection-類型)
 - [【用資安新聞學資安名詞】](#用資安新聞學資安名詞)
-- [【Refer】](#refer)
+- [【Refer】](#Refer)
 
 ---
 </br>
@@ -1058,7 +1058,7 @@ Refer : https://ithelp.ithome.com.tw/articles/10333769
 ---
 ---
 
-# refer
+# Refer
 
 > 參考來源與致敬
 
@@ -1075,4 +1075,8 @@ Refer : https://ithelp.ithome.com.tw/articles/10333769
 
 ###### tags: `資安證照` `iPAS中級資安工程師` 
 
-[【Go Top】](#iPAS資安工程師中級-|-防護實務衝刺班-|-證照筆記-|-Ver.20250227)
+[【Go Top】](#目錄)
+
+
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""></br>
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
