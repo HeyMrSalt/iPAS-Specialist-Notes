@@ -28,7 +28,7 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-nc
 > 將採用 個人評估防護實務歷屆難題 與 個人評估資安重要專有名詞。
 
 ## 致敬
-> 在本筆記的最底下【Refer】致敬了在過去考試提供資源的網上各 **大大** **前輩** **貢獻者** 們，\
+> 在本筆記的最底下[【Refer】](#Refer)致敬了在過去考試提供資源的網上各 **大大** **前輩** **貢獻者** 們，\
 > 他們的 iPAS 資安中級筆記都非常 詳細 厲害，是我撰寫本筆記的動力與起因。\
 > 希望本篇能對正在學習資安的你有重點整理之幫助
 > **最後祝大家順利通關取得證照 !!!**
@@ -58,13 +58,20 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-nc
   - [【112-2 中級 防護實務】](#112-2-中級-防護實務)
   - [【111 中級 防護實務】](#111-中級-防護實務)
 - [【名詞工具重點說明】](#名詞工具重點說明)
-  - [【SIEM vs IDS】](#siem-vs-ids)
-  - [【APT 名詞說明 以及 常用技術手法】](#apt-名詞說明-以及-常用技術手法)
-  - [【OWASP Top 10 的詳細解釋】](#owasp-top-10-的詳細解釋)
-  - [【DDoS攻擊種類之對應OSI層級】](#ddos攻擊種類之對應osi層級)
-  - [【CVSS】](#cvss)
-  - [【SSDLC vs DevSecOps】](#ssdlc-vs-devsecops)
-  - [【SQL injection 類型】](#sql-injection-類型)
+  - [【SIEM vs IDS】](#SIEM-vs-IDS)
+  - [【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
+  - [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
+  - [【DDoS攻擊種類之對應OSI層級】](#DDoS攻擊種類之對應OSI層級)
+  - [【CVSS】](#CVSS)
+  - [【SSDLC vs DevSecOps】](#SSDLC-vs-DevSecOps
+  - [【SQL injection 類型】](#SQL-injection-類型)
+  - [【待更新-中間人攻擊MITM】](#中間人攻擊MITM)
+  - [【魚叉式網釣】](#魚叉式網釣)
+  - [【待更新-0-day零時差漏洞】](#0-day零時差漏洞)
+  - [【待更新-1-day】](#1-day)
+  - [【待更新-n-day】](#n-day)
+  - [【待更新-Q-day】](#q-day)
+  - [【Credentials vs Certificates】](#Credentials-vs-Certificates)
 - [【用資安新聞學資安名詞】](#用資安新聞學資安名詞)
 - [【Refer】](#Refer)
 
@@ -463,14 +470,14 @@ Ans : (C)\
 
 # 名詞工具重點說明
 
-- [【SIEM vs IDS】](#siem-vs-ids)
-- [【APT 名詞說明 以及 常用技術手法】](#apt-名詞說明-以及-常用技術手法)
-- [【OWASP Top 10 的詳細解釋】](#owasp-top-10-的詳細解釋)
-- [【DDoS攻擊種類之對應OSI層級】](#ddos攻擊種類之對應osi層級)
-- [【CVSS】](#cvss)
-- [【SSDLC vs DevSecOps】](#ssdlc-vs-devsecops)
-- [【SQL injection 類型】](#sql-injection-類型)
-- [【待更新-中間人攻擊MITM】](#中間人攻擊mitm)
+- [【SIEM vs IDS】](#SIEM-vs-IDS)
+- [【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
+- [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
+- [【DDoS攻擊種類之對應OSI層級】](#DDoS攻擊種類之對應OSI層級)
+- [【CVSS】](#CVSS)
+- [【SSDLC vs DevSecOps】](#SSDLC-vs-DevSecOps)
+- [【SQL injection 類型】](#SQL-injection-類型)
+- [【待更新-中間人攻擊MITM】](#中間人攻擊MITM)
 - [【魚叉式網釣】](#魚叉式網釣)
 - [【待更新-0-day零時差漏洞】](#0-day零時差漏洞)
 - [【待更新-1-day】](#1-day)
@@ -480,7 +487,7 @@ Ans : (C)\
 
 </br>
 
-## siem vs ids
+## SIEM vs IDS
 
 -   SIEM 安全資訊與事件管理：\
     Security Information and Event Management\
@@ -515,7 +522,7 @@ Ans : (C)\
 ---
 </br>
 
-## apt 名詞說明 以及 常用技術手法
+## APT 名詞說明 以及 常用技術手法
 
 ### 名詞
 * APT（Advanced Persistent Threat，高級持續性威脅）攻擊
@@ -575,7 +582,7 @@ Refer : ChatGPT_o1
 ---
 </br>
 
-## owasp top 10 的詳細解釋
+## OWASP Top 10 的詳細解釋
 >  From 2021年 發佈
 
 ### 1. 失效的存取控制 (Broken Access Control):
@@ -817,7 +824,7 @@ Refer : https://www.ithome.com.tw/news/166386
 ---
 </br>
 
-## cvss
+## CVSS
 >  有分成 V3 V4 (V3 is 3.0 3.1) (V4 is 4.0)
 
 CVSS 4.0 是在 2023 年 11 月 1 日 FIRST 正式發布了 CVSS 4.0\
@@ -866,7 +873,7 @@ Refer : https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=1
 ---
 </br>
 
-## ssdlc vs devsecops
+## SSDLCc vs DevSecOps
 > SSDLC = Secure Software Development Life Cycle\
 > DevSecOps = Development + Sec + Operations
 
@@ -894,7 +901,7 @@ Refer : https://accelera.com.au/what-the-sec-is-devsecops/
 ---
 </br>
 
-## sql injection 類型
+## SQL injection 類型
 > 各類型已整理成下圖
 
 ![Untitled](Appendix-img/SQL_Type.png) <br>
@@ -923,7 +930,7 @@ A: 這個經典的 SQL Injection Payload 是屬於 In-band 的類型<br>
 ---
 </br>
 
-## 中間人攻擊mitm
+## 中間人攻擊MITM
 > MIMT = Man In The Middle
 
 ---
@@ -954,7 +961,7 @@ A: 這個經典的 SQL Injection Payload 是屬於 In-band 的類型<br>
 # 用資安新聞學資安名詞
 
 - [【馬偕醫院遭勒索軟體攻擊事件】](#馬偕醫院遭勒索軟體攻擊事件)
-- [【Windows使用者介面零時差漏洞】](#windows使用者介面零時差漏洞)
+- [【Windows使用者介面零時差漏洞】](#Windows使用者介面零時差漏洞)
 
 ---
 </br>
@@ -1047,7 +1054,7 @@ Refer : https://ithelp.ithome.com.tw/articles/10333769
 ---
 </br>
 
-## windows使用者介面零時差漏洞
+## Windows使用者介面零時差漏洞
 > Feb 14, 2025
 > https://www.ithome.com.tw/news/167383
 
