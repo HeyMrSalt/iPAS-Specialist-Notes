@@ -56,6 +56,7 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-nc
   - [【113-2 中級 防護實務】](#113-2-中級-防護實務)
   - [【113-1 中級 防護實務】](#113-1-中級-防護實務)
   - [【112-2 中級 防護實務】](#112-2-中級-防護實務)
+  - [【112-1 中級 防護實務】](#112-1-中級-防護實務)
   - [【111 中級 防護實務】](#111-中級-防護實務)
 - [【名詞工具重點說明】](#名詞工具重點說明)
   - [【SIEM vs IDS】](#SIEM-vs-IDS)
@@ -233,7 +234,7 @@ Refer : https://www.first.org/cvss/v4-0
 
 因此選 (A)(D) 
 
-本筆記這處也有提到相關資訊 點擊查看更多學習資訊 [【CVSS】](#cvss)
+本筆記這處也有提到相關資訊 點擊查看更多學習資訊 [【CVSS】](#CVSS)
 
 ---
 </br>
@@ -271,12 +272,12 @@ Refer :　https://www.netscout.com/what-is-mitre-attack/credential-access
 ! 補充：中間人攻擊 縮寫也稱 MITM/MiTM 或 AITM/AiTM
 ```
 
-[待更新] 本筆記這處也有提到相關資訊 點擊查看更多學習資訊 [【中間人攻擊MITM】](#中間人攻擊mitm)
+[待更新] 本筆記這處也有提到相關資訊 點擊查看更多學習資訊 [【中間人攻擊MITM】](#中間人攻擊MITM)
 
 ---
 </br>
 
-【題組】情境如下
+【題組1】情境如下
 ```
 在 TechSecure Inc.，一家前沿的科技安全公司，資安團隊面臨著一項前所未有的挑戰。
 隨著開發團隊需要更多的彈性和功能來進行軟體開發，公司決定在其開發環境中採用 Windows Subsystem for Linux 2 (WSL2)。
@@ -291,7 +292,7 @@ Refer :　https://www.netscout.com/what-is-mitre-attack/credential-access
 ```
 
 ### 113-1-Q5
-【題組】駭客首先在 WSL 環境中部署了一個專門編寫的惡意 script\
+【題組1】駭客首先在 WSL 環境中部署了一個專門編寫的惡意 script\
 該 script 旨在利用 Windows 與 WSL 之間的互操作性漏洞。\
 請問其目的，最有可能是下列何項？（請選一個最合適的答案）\
 (A) 在 Windows 創立一個隱藏的管理員帳戶，以便未來存取\
@@ -382,6 +383,98 @@ Protect 功能的目的是開發和實施適當的保障措施,以確保關鍵�
 </br>
 
 ## 112-2 中級 防護實務
+
+---
+</br>
+
+
+
+## 112-1 中級 防護實務
+
+- [【Q33】](#112-1-Q33)
+- [【Q34】](#112-1-Q34)
+- [【Q35】](#112-1-Q35)
+- [【Q36】](#112-1-Q36)
+
+【題組4】情境如下
+```
+OSSTMM開源安全測試方法手冊（The Open Source Security Testing Methodology Manual）其中所述
+於測試安全性前應適當定義安全測試（Security Test）以妥善管理複雜性。
+```
+
+### 112-1-Q33
+【題組4】關於範圍（Scope）的敘述，下列何項錯誤？\
+(A) PHYSSEC實體安全（Physical Security）包含人員（Human）管道\
+(B) PHYSSEC實體安全（Physical Security）包含實體（Physical）管道\
+(C) SPECSEC頻譜安全（Spectrum Security）包含有線（Wired）管道\
+(D) COMSEC通訊安全（Communications Security）包含資料網路（Data Networks）管道\
+\
+Ans : (C)\
+\
+原因如下：\
+人員和實體層/物理層 屬於 PHYSSEC\
+無線通信 屬於 SPECSEC\
+電信和資料網路 屬於 COMSEC
+
+這些資訊可以在 OSSTMM 3 Page.35 看到這個表格 (https://www.isecom.org/OSSTMM.3.pdf) <br>
+OSSTMM 3 是由 ISECOM 官方所發布的資料\
+下面擷取自 OSSTMM 文件上 Security Test 中的 Scope (OSSTMM 3 Page.35)
+
+![Untitled](Appendix-img/OSSTMM_Security_Test_Scope_en.png) <br>
+▲ Fig.OSSTMM_Security_Test_Scope_en
+
+另自製中文版提供讀者
+
+![Untitled](Appendix-img/OSSTMM_Security_Test_Scope_zh_TW.png) <br>
+▲ Fig.OSSTMM_Security_Test_Scope_zh_TW
+
+Refer : https://www.isecom.org/OSSTMM.3.pdf
+
+---
+</br>
+
+### 113-2-Q6
+【題組1】【複選】工程師在評估使用「弱點評估」工具過程中發現了「通用弱點評分系統(Common Vulnerability Scoring System，CVSS)」的網站，請問下列敘述何項錯誤？\
+(A) CVSS 是一個開放的框架，主要用於傳達軟體弱點的特徵以及該弱點的風險程度\
+(B) CVSS 提供了一種獲取弱點主要特徵並產生回應其嚴重性的數位分數的方法\
+(C) CVSS 可以將數位分數轉換為定性表示形式(例如低、中、高以及嚴重)，來提供組織正確評估其弱點管理流程 並確定其處裡弱點的優先順序\
+(D) CVSS 由基本度量組(Base metric groups)、時間度量組 (Temporal metric groups)以及環境度量組 (Environmental metric groups)等三個部分所組成\
+\
+Ans : (A)(D)\
+\
+原因如下：\
+(A) 錯誤的地方在於 CVSS 的主要目的是評估和傳達弱點的嚴重性（Severity），而非風險程度（Risk Level）\
+嚴重性評估的是弱點本身的內在特性，如攻擊複雜度、影響範圍等；風險程度則需要考慮更多因素，包括威脅可能性、資產價值和控制措施等\
+\
+(D) 在 CVSS v2 與 v3 系列（例如 v3.0、v3.1）的確是由三大度量組合成：\
+Base（基本度量），Temporal（時間度量），Environmental（環境度量）\
+但在 CVSS v4.0（2023年正式釋出）的背景下是不正確的\
+因為 4.0把「Temporal（時間度量）」改為「Threat（威脅度量）」，且另外新增「Supplemental（補充度量）」，總共四大度量組\
+因此單純說「CVSS 由基本、時間、環境度量組成」已不適用 v4.0。
+
+其他選項解析：
+
+(B) 與 (C) 為正確敘述
+
+(B)「CVSS 產生反映嚴重性的數值分數」無論 v2、v3.1 或 v4.0，都會計算 0–10 之間的最終分數，以量化「漏洞的嚴重程度」\
+(C)「CVSS 的數值分數對應到定性等級」，舉例來說對應如下：
+- 0.0 = None
+- 0.1–3.9 = Low
+- 4.0–6.9 = Medium
+- 7.0–8.9 = High
+- 9.0–10.0 = Critical（或危急）
+這種分數對應等級的做法在 CVSS 中相當普遍，也有助於實際漏洞管理中排修優先次序
+
+Refer : https://www.first.org/cvss/v4-0
+
+因此選 (A)(D) 
+
+本筆記這處也有提到相關資訊 點擊查看更多學習資訊 [【CVSS】](#cvss)
+
+---
+</br>
+
+
 
 ---
 </br>
