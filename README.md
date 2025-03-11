@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/0f18d99f-d086-4921-a82d-912f80df001b)<!--
+<!--
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
 To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
 -->
