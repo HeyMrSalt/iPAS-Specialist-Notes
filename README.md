@@ -1,11 +1,11 @@
-<!--
+![image](https://github.com/user-attachments/assets/0f18d99f-d086-4921-a82d-912f80df001b)<!--
 This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
 To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
 -->
 
-# iPAS資安工程師中級 | 防護實務衝刺班 | 證照筆記 | Ver.20250311 [![Hits](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes.svg)](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes/)
+# iPAS資安工程師中級 | 防護實務衝刺班 | 證照筆記 | Ver.20250312 [![Hits](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes.svg)](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes/)
 > 此 repository 為 iPAS 資安工程師 中級證照筆記。\
-> 範圍將著重在【防護實務】並以【歷屆難題與解析】與【名詞工具重點說明】方式呈現。
+> 範圍將著重在【防護實務】並以【歷屆難題與解析】與【資安重要專有名詞】方式呈現。
 
 ## Authors
 > 國立臺北科技大學 資安碩 [HeyMrSalt](https://github.com/HeyMrSalt) 🧂\
@@ -14,18 +14,17 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-nc
 > 國立臺北科技大學 資安碩 [Paul](https://github.com/paulwang19)\
 > 國立臺北科技大學 資安碩 [Jason](https://github.com/han20011222)
 
-## 學術聲明
-> 學術倫理聲明：此筆記僅限學術學習，嚴禁任意轉載，亦禁止改作、出版、或商業用途。\
-> 由於人工整理，部分內容可能不完整；\
-> 亦或是部分內容學習來源參考各方資源，無意侵權並盡可能附上來源，還請各位指教。\
-> 也歡迎想參予的貢獻者發 PR 更新筆記讓它更完整；或發 Issue 來 提問 / 建議 / 討論 筆記上的內容。
+## 學術倫理聲明
+> 本筆記僅限於學術研究與學習之用途，嚴禁商業利用、出版或未經授權之修改。\
+> 部分內容參考各方資源，整理過程中無意侵犯著作權，已盡量附上原始來源，如有不妥還請指教包涵。\
+> 因筆記為人工整理，圖表與內容難免不盡完善，還望多多海涵。\
+> 此外，也歡迎有志貢獻者提交 PR 更新筆記讓它更完整，或透過 Issue 分享疑問、建議與討論。\
+> 同時若您意願轉載或分享此筆記時，還請務必附上連結。若您覺得筆記有助，懇請點星支持，共推知識傳遞與交流！
 
 ## 前言
 > 往年的 中級資安工程師證照考試【防護實務】通過率約 **三成**，\
-> 此筆記以【防護實務衝刺班】為設計核心，目的為增加得分率通過率。
-
-## 筆記方向
-> 將採用 個人評估防護實務歷屆難題 與 個人評估資安重要專有名詞。
+> 故此筆記將以【防護實務衝刺班】為設計核心，為此通過率提高得分之目的。\
+> 本筆記方向將採用  [【個人評估防護實務歷屆難題】](#歷屆難題與解析) 與 [【個人評估資安重要專有名詞】](#資安重要專有名詞) 。
 
 ## 致敬
 > 在本筆記的最底下[【Refer】](#Refer)致敬了在過去考試提供資源的網上各 **大大** **前輩** **貢獻者** 們，\
@@ -36,10 +35,8 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-nc
 ## 每週更新ing
 > 目前和幾位實驗室同學 規劃了每週一次為期五週的小型讀書會 雖說當前讀書會不對外開放，\
 > 但預計會將些讀書會內容/筆記整理上來 以利大家準備 2025/03/22 (六) 中級考試。\
-> 同時也更新【用資安新聞學資安名詞】新章節 關注近期國內外大小資安事件 並 認識些資安名詞。\
+> 同時也更新[【用資安新聞學資安名詞】](#用資安新聞學資安名詞)新章節 關注近期國內外大小資安事件 並 從中認識些資安名詞。\
 > 最後預祝各位考生本次順利上岸 💪
-
-
 
 ---
 </br>
@@ -58,7 +55,8 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-nc
   - [【112-2 中級 防護實務】](#112-2-中級-防護實務)
   - [【112-1 中級 防護實務】](#112-1-中級-防護實務)
   - [【111 中級 防護實務】](#111-中級-防護實務)
-- [【名詞工具重點說明】](#名詞工具重點說明)
+- [【資安重要專有名詞】](#資安重要專有名詞)
+  - [【資通安全事件通報流程】](#資通安全事件通報流程)
   - [【SIEM vs IDS】](#SIEM-vs-IDS)
   - [【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
   - [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
@@ -68,11 +66,9 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-nc
   - [【SQL injection 類型】](#SQL-injection-類型)
   - [【待更新-中間人攻擊MITM】](#中間人攻擊MITM)
   - [【魚叉式網釣】](#魚叉式網釣)
-  - [【待更新-0-day零時差漏洞】](#0-day零時差漏洞)
-  - [【待更新-1-day】](#1-day)
-  - [【待更新-n-day】](#n-day)
-  - [【待更新-Q-day】](#q-day)
-  - [【Credentials vs Certificates】](#Credentials-vs-Certificates)
+  - [【0-day零時差漏洞】](#0-day零時差漏洞)
+  - [【Other-days】](#Other-days)
+  - [【待更新-Credentials vs Certificates】](#Credentials-vs-Certificates)
 - [【用資安新聞學資安名詞】](#用資安新聞學資安名詞)
 - [【Refer】](#Refer)
 
@@ -80,6 +76,14 @@ To view a copy of this license, visit https://creativecommons.org/licenses/by-nc
 </br>
 
 # 官方資訊
+
+- [【鑑定制度與評鑑內容】](#鑑定制度與評鑑內容)
+- [【證書效期與換發】](#證書效期與換發)
+- [【數發部-資通安全專業證照清單】](#數發部-資通安全專業證照清單)
+- [【線上免費資源-工業技術研究院iPAS影音課程】](#線上免費資源-工業技術研究院iPAS影音課程)
+
+---
+</br>
 
 ## 鑑定制度與評鑑內容
 
@@ -149,6 +153,8 @@ Refer : [iPAS數位課程平台入口網址](https://collegeplus.itri.org.tw)
 - [【113-2 中級 防護實務】](#113-2-中級-防護實務)
 - [【113-1 中級 防護實務】](#113-1-中級-防護實務)
 - [【112-2 中級 防護實務】](#112-2-中級-防護實務)
+- [【112-1 中級 防護實務】](#112-1-中級-防護實務)
+- [【111 中級 防護實務】](#111-中級-防護實務)
 
 ---
 </br>
@@ -384,17 +390,124 @@ Protect 功能的目的是開發和實施適當的保障措施,以確保關鍵�
 
 ## 112-2 中級 防護實務
 
+- [【Q18】](#112-2-Q18)
+- [【Q18】](#112-2-Q18)
+
+### 112-2-Q18
+【題組2】【複選】情境如附圖所示,承上題,資安小組在設定災難恢復目標時,\
+負責資料備份與事件回應小組無法正確的擬定 RTO (Recovery Time Objective),\
+看來是負責資料備份的同仁誤解了 RTO 的定義,下列哪些是正確的?\
+\
+(A) RTO 決定了備份政策\
+(B) RTO 決定了復原政策\
+(C) 業務流程中斷到恢復到可接受的服務水平所需要的最大時間\
+(D) 資料備份從啟動到備份完成所需要的最短時間\
+\
+Ans : (A) (B)\
+\
+說明如下：
+
+RTO 主要用於 **災難恢復（Disaster Recovery, DR）** 及 **業務持續性計畫（BCP）**
+
+它決定了當系統或業務發生故障後，必須在多長時間內恢復運行，以避免超過可接受的影響範圍。\
+RTO 影響企業對災難恢復技術的選擇，例如：\
+  - 短 RTO（幾分鐘到數小時） ➝ 需要熱備份（Hot Backup）、高可用性架構（如雙活數據中心）。
+  - 長 RTO（數小時到數天） ➝ 可使用冷備份（Cold Backup）或異地備份恢復。
+
+(C) RTO 代表的是**企業能夠接受的最大恢復時間**，而「非實際恢復時間」。\
+題目中的 「所需要的最大時間」 可能讓人誤以為是 **系統實際需要的時間**\
+但 RTO 是企業允許的時間，而非技術上需要的時間。
+
+(D) 指的是「備份速度」，應與復原目標點(Recovery Point Objective, RPO) 較相關。\
+恢復活動使用的資訊/資料，以使活動能夠在恢復時運作的點
+
 ---
 </br>
 
+### 112-2-Q20
+依照我國「資通安全事件通報及應變辦法」的規定,當發現一般公務機密、敏感資訊、\
+涉及關鍵基礎設施維運之核心業務資訊或核心資通系統遭輕微竄改之情事時,\
+公務機關知悉資通安全事件後,應依規定在多少時間之內完成損害控制或復原作業,\
+並依主管機關指定之方式及對象辦理通知事宜?\
+\
+(A) 12 小時\
+(B) 24 小時\
+(C) 36 小時\
+(D) 72 小時\
+\
+Ans : (C)\
+\
+說明如下：
 
+「關鍵基礎設施」之**核心業務**資訊\
+「核心資通系統」遭**輕微竄改**
+
+![Untitled](Appendix-img/Information_Security_Reporting_Process.png) <br>
+▲ Fig.Information_Security_Reporting_Process
+
+---
+</br>
 
 ## 112-1 中級 防護實務
 
+- [【Q4】](#112-1-Q4)
+- [【Q24】](#112-1-Q24)
 - [【Q33】](#112-1-Q33)
 - [【Q34】](#112-1-Q34)
 - [【Q35】](#112-1-Q35)
 - [【Q36】](#112-1-Q36)
+- [【Q40】](#112-1-Q40)
+
+### 112-1-Q4
+【複選】下列哪些是目前2021版OWASP Top 10中所包含的前10種常見風險類別？\
+\
+(A) 權限控制失效（Broken Access Control） \
+(B) 跨站請求偽造（Cross-Site Request Forgery） \
+(C) 注入式攻擊（Injection）\
+(D) 加密機制失效（Cryptographic Failures）\
+\
+Ans : (A) (C) (D)\
+\
+說明如下：
+
+簡單來說，CSRF 在 2021 年並非被「移除」
+
+而是將 CSRF 歸納到更廣泛的弱點範疇「存取控制失敗」或「不安全的設計」\
+「Broken Access Control」或「Insecure Design」
+
+且 再加上業界防禦機制日益成熟 如今大多數開發框架都內建或簡單支援像是\
+CSRF Token、SameSite Cookie 等保護措施，\
+導致 CSRF 在實務中遭到利用的機率相對降低，不代表不存在
+
+---
+</br>
+
+### 112-1-Q24
+【題組3】【複選】導入零信任架構時，可能面臨的威脅挑戰有下列哪些？\
+\
+(A) 網路的可視性\
+(B) 帳密被盜/內部威脅\
+(C) 遭遇 DoS 阻斷服務或網路中斷\
+(D) 可建立動態存取政策的控管\
+\
+Ans : (A) (B) (C)\
+\
+各選項說明如下：
+
+**(A) 網路的可視性** ✅
+- **正確**。零信任架構強調「永不信任、持續驗證」，這要求**完整的網路可視性來監控所有存取行為**。然而，組織通常會發現難以獲取完整的流量監控，尤其是在多雲或混合環境下，這可能導致安全風險。
+
+**(B) 帳密被盜/內部威脅** ✅
+- **正確**。零信任假設內部也有風險，因此如果**帳號憑證遭竊**，或**內部人員有惡意行為**，就可能繞過部分存取控制並導致安全問題。**即使採用多因素驗證（MFA）**，攻擊者仍可能利用社交工程或其他方式竊取登入資訊。
+
+**\(C) 遭遇 DoS 阻斷服務或網路中斷** ✅
+- **正確**。零信任架構通常**仰賴集中控管和強制驗證機制**，這些系統如果遭受 **DoS（阻斷服務攻擊）**，或**核心驗證系統宕機**，可能會導致整個企業無法正常存取關鍵資源。
+
+**(D) 可建立動態存取政策的控管** ❌
+- **錯誤**。**動態存取控制是零信任的核心「優勢」，而不是挑戰**。零信任架構允許動態調整存取權限（如基於用戶行為分析、自適應身份驗證等），這反而有助於提升安全性，而不是一種威脅或挑戰。
+
+---
+</br>
 
 【題組4】情境如下
 ```
@@ -433,56 +546,155 @@ Refer : https://www.isecom.org/OSSTMM.3.pdf
 ---
 </br>
 
-### 113-2-Q6
-【題組1】【複選】工程師在評估使用「弱點評估」工具過程中發現了「通用弱點評分系統(Common Vulnerability Scoring System，CVSS)」的網站，請問下列敘述何項錯誤？\
-(A) CVSS 是一個開放的框架，主要用於傳達軟體弱點的特徵以及該弱點的風險程度\
-(B) CVSS 提供了一種獲取弱點主要特徵並產生回應其嚴重性的數位分數的方法\
-(C) CVSS 可以將數位分數轉換為定性表示形式(例如低、中、高以及嚴重)，來提供組織正確評估其弱點管理流程 並確定其處裡弱點的優先順序\
-(D) CVSS 由基本度量組(Base metric groups)、時間度量組 (Temporal metric groups)以及環境度量組 (Environmental metric groups)等三個部分所組成\
+### 112-1-Q34
+【題組4】如附圖所示，OSSTMM 開源安全測試方法手冊（The Open Source Security Testing Methodology Manual）\
+其中所述，於測試安全性前應適當定義安全測試（Security Test）以妥善管理複雜性。\
+關於常見的安全測試類型，下列敘述何項錯誤？
+
+![Untitled](Appendix-img/112-1-Q34.png) <br>
+▲ Fig.112-1-Q34
+
+(A) 盲測（Blind Test）通常也稱為藍隊演練（Blue Team Exercise）\
+(B) 雙盲測試（Double Blind Test）通常也稱為滲透測試 （Penetration Test）\
+(C) 灰箱測試（Gray Box Test）常被稱為弱點測試 （Vulnerability Test）\
+(D) 反向測試（Reversal Test）通常也稱為紅隊演練 （Red Team Exercise）\
 \
-Ans : (A)(D)\
+Ans : (A)\
 \
-原因如下：\
-(A) 錯誤的地方在於 CVSS 的主要目的是評估和傳達弱點的嚴重性（Severity），而非風險程度（Risk Level）\
-嚴重性評估的是弱點本身的內在特性，如攻擊複雜度、影響範圍等；風險程度則需要考慮更多因素，包括威脅可能性、資產價值和控制措施等\
-\
-(D) 在 CVSS v2 與 v3 系列（例如 v3.0、v3.1）的確是由三大度量組合成：\
-Base（基本度量），Temporal（時間度量），Environmental（環境度量）\
-但在 CVSS v4.0（2023年正式釋出）的背景下是不正確的\
-因為 4.0把「Temporal（時間度量）」改為「Threat（威脅度量）」，且另外新增「Supplemental（補充度量）」，總共四大度量組\
-因此單純說「CVSS 由基本、時間、環境度量組成」已不適用 v4.0。
+盲測指的是攻擊方幾乎不了解受測方的任何細節\
+攻擊者在 COMSEC 和 SPECSEC 中通常稱作道德駭客\
+在 PHYSSEC 通常稱作角色扮演
+Fig.112-1-Q34 這圖是來自於 OSSTMM 3 Page.36
 
-其他選項解析：
-
-(B) 與 (C) 為正確敘述
-
-(B)「CVSS 產生反映嚴重性的數值分數」無論 v2、v3.1 或 v4.0，都會計算 0–10 之間的最終分數，以量化「漏洞的嚴重程度」\
-(C)「CVSS 的數值分數對應到定性等級」，舉例來說對應如下：
-- 0.0 = None
-- 0.1–3.9 = Low
-- 4.0–6.9 = Medium
-- 7.0–8.9 = High
-- 9.0–10.0 = Critical（或危急）
-這種分數對應等級的做法在 CVSS 中相當普遍，也有助於實際漏洞管理中排修優先次序
-
-Refer : https://www.first.org/cvss/v4-0
-
-因此選 (A)(D) 
-
-本筆記這處也有提到相關資訊 點擊查看更多學習資訊 [【CVSS】](#cvss)
+Refer : https://www.isecom.org/OSSTMM.3.pdf
 
 ---
 </br>
 
+### 112-1-Q35
+【題組4】OSSTMM 開源安全測試方法手冊（The Open Source Security Testing Methodology Manual）其中所述\
+於測試安全性前應適當定義安全測試（Security Test）以妥善管理複雜性。\
+關於錯誤類型（Error Type）之描述，下列何項錯誤？
 
+(A) 假陽性（False Positive）：測試結果被判斷為真實， 但實際證明其為虛假\
+(B) 假陰性（False Negative）：測試結果被判斷為虛假， 但實際證明其為真實\
+(C) 抽樣誤差（Sampling Error）：測試結果不具代表性， 因為範圍被改變\
+(D) 人為錯誤（Human Error）：測試結果因受測者的行 為舉止而受到改變\
+\
+Ans : (D)\
+\
+正確的人為錯誤定義應該是：\
+測試過程中因測試者的失誤、判斷錯誤或操作不當而導致的錯誤。\
+這可能包括數據收集錯誤、分析錯誤、或者解釋錯誤等。
+
+因此，答案是 (D)。這個選項錯誤地將人為錯誤歸因於受測者的行為，而不是測試者的錯誤。
+
+Refer : https://www.isecom.org/OSSTMM.3.pdf
 
 ---
 </br>
 
+### 112-1-Q36
+【題組4】【複選】OSSTMM 開源安全測試方法手冊（The Open Source Security Testing Methodology Manual）其中所述\
+於測試安全性前應適當定義安全測試（Security Test）以妥善管理複雜性。\
+關於定義安全測試（Defining a Security Test）的描述，下列哪些正確？
+
+(A) 定義所需保護的資產，找出其控制（Control）機制之侷限（Limitations）\
+(B) 識別資產所處區域（Engagement Zone），包含相關保護機制、程序與服務\
+(C) 定義測試範圍媒介（Vectors）如何內外交互，如：內到內、內到外、A 到 B 單位\
+(D) 確保安全測試定義符合教戰守則（Role of Engagement）以避免誤解或錯誤期待\
+\
+Ans : (A) (B) (C) (D)\
+\
+Refer : https://www.isecom.org/OSSTMM.3.pdf
+
+---
+</br>
+
+### 112-1-Q40
+【複選】成功滲透到某個網站後，為了避免觸發相關警示而通知 IT 人員，於是採用「免殺（迴避防毒軟體的偵測）」的手法。\
+發現該主機為一台 Windows 10 所搭建網站系統，決定使用 Windows 作業系統中相關工具程式來進行 Command & Control\
+下面哪些 Windows 作業系統「原生」指令可以使用在遠端下載？\
+\
+(A) Bitsadmin.exe\
+(B) Certutil.exe\
+(C) HH.exe\
+(D) Update.exe\
+\
+Ans : (A) (B) (C)\
+\
+各選項說明如下：
+
+**(A) Bitsadmin.exe**
+- **作用：** `bitsadmin.exe` 是 Windows 內建的 BITS（Background Intelligent Transfer Service）管理工具，攻擊者可用來**從遠端伺服器下載惡意檔案**。
+
+**(B) Certutil.exe**
+- **作用：** `certutil.exe` 是 Windows 內建的工具，主要用於管理憑證，但也可用來**下載與解碼檔案**。
+
+**\(C) HH.exe（HTML Help Executable）**
+- **作用：** `hh.exe` 是 Windows 的**CHM（HTML Help）檔案查看工具**，可以用來執行 HTML 內容，進而觸發遠端下載。
+
+**(D) Update.exe**
+- `update.exe` 通常是 Windows Update 相關的程式，並非標準的下載工具。
+- 這個名稱可能出現在**特定應用程式的安裝更新工具**，但不是 Windows 內建的遠端下載工具。
+
+---
+</br>
 
 ## 111 中級 防護實務
 
+- [【Q1】](#111-Q1)
 - [【Q26】](#111-Q26)
+
+### 111-Q1
+請問下列何項惡意程式具有 SSH 劫持的能力?\
+\
+(A) Ebury\
+(B) Azorult\
+(C) MacSpy\
+(D) Xtunnel\
+\
+Ans : (A)\
+\
+各選項說明如下：
+
+**Ebury**：
+- 一種 **Linux 伺服器後門**，主要用於 **SSH 憑據竊取與劫持**。
+- 會感染 OpenSSH，記錄 SSH 登入憑據，並建立後門存取。
+- 主要影響 Linux 與 BSD 系統，通常用於 **伺服器入侵** 和 **殭屍網路控制**。
+
+**Xtunnel**：
+- 一個與 **APT（高級持續性威脅）** 相關的惡意軟體。
+- 由 APT28（Fancy Bear，俄羅斯黑客組織）使用，主要用於 **SSH 隧道轉發（Tunneling）** 來繞過防火牆，建立遠端連接。
+- 曾被用於 **美國 DNC（民主黨全國委員會）** 駭客攻擊事件。
+
+### ❌**排除選項：**
+
+**Azorult (B)**：
+- 主要是一種 **Windows 竊取木馬**，專門用於竊取 **密碼、加密貨幣錢包、瀏覽器數據**，不具備 SSH 劫持功能。
+
+**MacSpy \(C)**：
+- 主要針對 **macOS**，用於 **鍵盤側錄、螢幕截圖、麥克風錄音**，沒有專門的 SSH 劫持功能。
+
+#### **SSH 劫持的類型**
+1. **SSH Session Hijacking（會話劫持）**
+    - 駭客在目標系統上取得 **root 權限**，直接**接管現有的 SSH 會話**（Session）。
+    - 方式：
+        - 利用 `ptrace`（Linux 偵錯機制）來**附加到 SSH 進程**，控制當前的 SSH 連線。
+        - 修改 SSH 會話記錄 (`/dev/tty` 或 `/proc/<pid>/fd/0`)，劫持輸入輸出。
+    - **實例**：惡意程式 **Ebury** 可劫持 SSH 會話，讓攻擊者在不重新認證的情況下控制伺服器。
+2. **SSH Credential Hijacking（憑證劫持）**
+    - 駭客竊取 **SSH 憑據（帳號/密碼或私鑰）**，然後用來登入受害者的伺服器。
+    - 方式：
+        - **鍵盤側錄**（Keylogging）
+        - **感染 OpenSSH 進程**，記錄輸入的密碼（如 Ebury）。
+        - **中間人攻擊（MITM）**，攔截 SSH 登入請求（如 DNS 欺騙+惡意 SSH 伺服器）。
+3. **SSH Tunneling Hijacking（隧道劫持）**
+    - 駭客利用 SSH 隧道技術來繞過防火牆，建立遠端連線，或**劫持 SSH 流量**來竊取數據。
+    - **實例**：APT28（Fancy Bear）使用 **Xtunnel** 來劫持 SSH 隧道並進行間諜活動。
+
+---
+</br>
 
 【題組2】情境如下
 ```
@@ -561,8 +773,9 @@ Ans : (C)\
 ---
 </br>
 
-# 名詞工具重點說明
+# 資安重要專有名詞
 
+- [【資通安全事件通報流程】](#資通安全事件通報流程)
 - [【SIEM vs IDS】](#SIEM-vs-IDS)
 - [【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
 - [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
@@ -572,12 +785,19 @@ Ans : (C)\
 - [【SQL injection 類型】](#SQL-injection-類型)
 - [【待更新-中間人攻擊MITM】](#中間人攻擊MITM)
 - [【魚叉式網釣】](#魚叉式網釣)
-- [【待更新-0-day零時差漏洞】](#0-day零時差漏洞)
-- [【待更新-1-day】](#1-day)
-- [【待更新-n-day】](#n-day)
-- [【待更新-Q-day】](#q-day)
+- [【0-day零時差漏洞】](#0-day零時差漏洞)
+- [【Other-days】](#Other-days)
 - [【Credentials vs Certificates】](#Credentials-vs-Certificates)
 
+</br>
+
+## 資通安全事件通報流程
+> 已粗略整理成下圖
+
+![Untitled](Appendix-img/Information_Security_Reporting_Process.png) <br>
+▲ Fig.Information_Security_Reporting_Process
+
+---
 </br>
 
 ## SIEM vs IDS
@@ -1051,6 +1271,66 @@ A: 這個經典的 SQL Injection Payload 是屬於 In-band 的類型<br>
 ---
 </br>
 
+## 0-day零時差漏洞
+> 也稱「零日漏洞」
+
+意義：\
+也就是在尚未被廠商或防護系統得知、修補或發布修正之前，就已經被攻擊者掌握且可被利用的安全漏洞。
+
+關鍵點：\
+因為在廠商不知道或尚未釋出修補程式的情況下，攻擊者可立即利用該漏洞，風險極高。
+
+---
+</br>
+
+## Other-days
+> 1 N Q 1/2
+
+### 1-day
+
+意義：\
+有時稱作「1-day 漏洞」，通常指已被公開或廠商已知曉，甚至已經有修補程式釋出，但攻擊者仍能利用的漏洞。
+
+關鍵點：\
+1-day 漏洞通常指的是「已知漏洞」（Known Vulnerability），可能已有修補程式，但尚未被所有用戶或系統管理員及時更新。
+
+### N-day
+
+意義：\
+此概念與 1-day 相似，但將「已知漏洞」的時間延長，稱為「N-day 漏洞」。
+
+關鍵點：\
+N-day 漏洞代表漏洞已經在公開後持續存在 N 天，攻擊者可能在這段時間內針對尚未更新或修補的系統進行攻擊。
+
+### Q-day
+
+意義：\
+此詞較不常見於一般漏洞討論，更多時候是出現在「量子運算」相關的安全議題。\
+所謂「Q-day」通常指的是「量子電腦足以破解現行加密技術的那一天」。
+
+關鍵點：\
+一旦量子運算能力達到足以破解現行主流加密演算法（如 RSA、ECC 等）的門檻，可能引發大規模的資安危機，故稱之為「Q-day」。
+
+### 0.5-day
+
+意義：\
+這並非標準或普遍使用的術語，偶爾在研究或口語場合中有人用「0.5-day」表示「部分公開、部分修補或部分利用」的狀態。
+
+可能的解釋：\
+半公開：漏洞資訊已在小範圍（例如特定研究員或封測群）中流傳，但還未完全公開。\
+半修補：官方或社群已提出部分臨時解法或繞路修補，但尚未有完整的正式更新。\
+半利用：攻擊者掌握部分利用程式，但尚未有完整的自動化攻擊工具。
+
+### Some-days懶人包
+
+- 0-day：廠商未知、無補丁，攻擊者可立即利用。
+- 1-day / N-day：漏洞已公開、廠商或社群已知，有可能有修補程式，但尚未完全部署。
+- Q-day：量子運算突破加密保護的「那一天」。
+- 0.5-day：非標準用語，可能指部分公開、部分修補、或部分利用的中間狀態。
+
+---
+</br>
+
 # 用資安新聞學資安名詞
 
 - [【馬偕醫院遭勒索軟體攻擊事件】](#馬偕醫院遭勒索軟體攻擊事件)
@@ -1231,7 +1511,7 @@ MD5: 3bd2eeda66ec057727be8810fee5da38
 ### APT Group
 APT Group (進階持續性威脅團隊)\
 我想直接來看 下方連結 就可以理解了 只不過他們是個組織團隊\
-【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
+[【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
 
 ### dir Command
 是一個在 Windows 命令提示字元中使用的指令，用來列出指定目錄下所有檔案與資料夾\
