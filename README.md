@@ -1,6 +1,6 @@
 <!--
-This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
-To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/
+This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License][cc-by-nc-nd].
+[![CC BY-NC-ND 4.0][cc-by-nc-nd-image]][cc-by-nc-nd]
 -->
 
 # iPAS資安工程師中級 | 防護實務衝刺班 | 證照筆記 | Ver.20250312 [![Hits](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes.svg)](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes/)
@@ -1554,16 +1554,21 @@ Refer : https://hoploninfosec.com/windows-ui-vulnerability-exploited/
 8. [iThome](https://www.ithome.com.tw/) 
 
 ---
-
 </br>
 
-# 回到目錄
+# 筆記結束按我回到目錄
 [【Go Top】](#目錄)
 
+---
 </br>
 
 ###### tags: `資安證照` `iPAS中級資安工程師` 
 
-This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\
-To view a copy of this license, visit https://creativecommons.org/licenses/by-nc/4.0/</br>
-[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+This work is licensed under a </br>
+[Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License][cc-by-nc-nd].
+
+[![CC BY-NC-ND 4.0][cc-by-nc-nd-shield]][cc-by-nc-nd] 　 [![CC BY-NC-ND 4.0][cc-by-nc-nd-image]][cc-by-nc-nd] 
+
+[cc-by-nc-nd]: http://creativecommons.org/licenses/by-nc-nd/4.0/
+[cc-by-nc-nd-image]: https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png
+[cc-by-nc-nd-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg
