@@ -57,6 +57,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDeri
   - [【111 中級 防護實務】](#111-中級-防護實務)
 - [【資安重要專有名詞】](#資安重要專有名詞)
   - [【資通安全事件通報流程】](#資通安全事件通報流程)
+  - [【常見Port號】](#常見Port號)
   - [【SIEM vs IDS】](#SIEM-vs-IDS)
   - [【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
   - [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
@@ -391,7 +392,7 @@ Protect 功能的目的是開發和實施適當的保障措施,以確保關鍵�
 ## 112-2 中級 防護實務
 
 - [【Q18】](#112-2-Q18)
-- [【Q18】](#112-2-Q18)
+- [【Q20】](#112-2-Q20)
 
 ### 112-2-Q18
 【題組2】【複選】情境如附圖所示,承上題,資安小組在設定災難恢復目標時,\
@@ -776,6 +777,7 @@ Ans : (C)\
 # 資安重要專有名詞
 
 - [【資通安全事件通報流程】](#資通安全事件通報流程)
+- [【常見Port號】](#常見Port號)
 - [【SIEM vs IDS】](#SIEM-vs-IDS)
 - [【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
 - [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
@@ -796,6 +798,48 @@ Ans : (C)\
 
 ![Untitled](Appendix-img/Information_Security_Reporting_Process.png) <br>
 ▲ Fig.Information_Security_Reporting_Process
+
+---
+</br>
+
+## 常見Port號
+> 已粗略整理成下表
+
+| 連接埠 (Port)           | TCP/UDP  | 服務 / 協定                                  | 用途 / 說明                                                        |
+|-------------------------|----------|----------------------------------------------|---------------------------------------------------------------------|
+| 20, 21                  | TCP      | FTP (File Transfer Protocol)                | 檔案傳輸；20 為資料連接、21 為指令控制                              |
+| 22                      | TCP      | SSH (Secure Shell)                          | 安全遠端登入、加密傳輸                                              |
+| 23                      | TCP      | Telnet                                      | 明文遠端登入，不安全                                                |
+| 25, 465                 | TCP      | SMTP (Simple Mail Transfer Protocol)        | 郵件傳送；25 為明文、465 為加密 (SMTPS)                              |
+| 53                      | TCP/UDP  | DNS (Domain Name System)                    | 網域名稱查詢與解析                                                  |
+| 67, 68                  | UDP      | DHCP (Dynamic Host Configuration Protocol)  | 自動分配 IP；67 為伺服器、68 為客戶端                                |
+| 69                      | UDP      | TFTP (Trivial File Transfer Protocol)       | 簡易檔案傳輸，無驗證與加密機制                                      |
+| 80                      | TCP      | HTTP (Hypertext Transfer Protocol)          | 明文的網站傳輸                                                      |
+| 110, 995                | TCP      | POP3 (Post Office Protocol 3)               | 收取郵件；110 為明文、995 為加密 (POP3S)                            |
+| 119                     | TCP      | NNTP (Network News Transfer Protocol)       | 網路新聞群組 (Usenet)                                               |
+| 123                     | UDP      | NTP (Network Time Protocol)                 | 網路時間同步                                                        |
+| 137, 138, 139           | UDP/TCP  | NetBIOS                                     | Windows 網段檔案、印表機共用與名稱服務                              |
+| 143, 993                | TCP      | IMAP (Internet Message Access Protocol)     | 收取與管理郵件；143 為明文、993 為加密 (IMAPS)                      |
+| 161, 162                | UDP      | SNMP (Simple Network Management Protocol)   | 161 用於管理查詢、162 為 Trap (主動回報)                            |
+| 389, 636                | TCP/UDP  | LDAP (Lightweight Directory Access Protocol)| 389 為明文查詢、636 為加密 (LDAPS)                                  |
+| 443                     | TCP      | HTTPS (HTTP over SSL/TLS)                  | 加密的網站傳輸                                                      |
+| 445                     | TCP      | SMB (Server Message Block)                  | Windows 網路檔案共用                                                |
+| 548                     | TCP      | AFP (Apple Filing Protocol)                 | Apple 裝置檔案共用                                                  |
+| 1433                    | TCP      | Microsoft SQL Server                        | MS SQL 預設通訊埠                                                   |
+| 1521                    | TCP      | Oracle Database                             | Oracle 預設通訊埠 (TNS Listener)                                    |
+| 3306                    | TCP      | MySQL                                       | MySQL 預設通訊埠                                                    |
+| 3389                    | TCP/UDP  | RDP (Remote Desktop Protocol)               | Windows 遠端桌面                                                    |
+| 5900                    | TCP      | VNC (Virtual Network Computing)             | 遠端視窗控制                                                        |
+| 8080, 8443              | TCP      | HTTP Proxy / Alternate HTTP                 | 8080 為常見代理或替代 HTTP、8443 用於 HTTPS Proxy 或管理介面         |
+| 5060, 5061              | TCP/UDP  | SIP (Session Initiation Protocol)           | VoIP 建立多媒體通話；5060 為明文、5061 為加密 (TLS)                  |
+
+> 同上已粗略整理成下圖 (表格跑掉可改看圖)
+
+![Untitled](Appendix-img/Common_Port.png) <br>
+▲ Fig.Common_Port
+
+> 紅字為個人評估必知項目，但最好全部都要瞭解\
+> 此外也額外補充這些Port可能面臨的風險以及相關安全資訊
 
 ---
 </br>
@@ -1186,7 +1230,7 @@ Refer : https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=1
 ---
 </br>
 
-## SSDLCc vs DevSecOps
+## SSDLC vs DevSecOps
 > SSDLC = Secure Software Development Life Cycle\
 > DevSecOps = Development + Sec + Operations
 
@@ -1412,14 +1456,14 @@ Windows 的數位簽章\
 即可在核心層級進行操作，可能繞過許多防毒、EDR 等安全防護。\
 在最高權限下進一步橫向移動、植入惡意程式或進行其他攻擊行為。
 
-![Untitled](Appendix-img/BYOVD_Attack_from_Zeze.png) <br>
-▲ Fig.BYOVD_Attack_from_Zeze
+![Untitled](Appendix-img/BYOVD_Inf_from_Zeze.png) <br>
+▲ Fig.BYOVD_Inf_from_Zeze
 
 這圖是來自 大神Zeze 在 iThome 2023 所撰寫的\
 **來自核心－烈日的 Windows** 系列文章【第 20 話】BYOVD 攻擊\
-很精采 推薦大家有興趣一定要去看\
-裡頭除了關於 BYOVD 更多細節與資訊\
-系列文章前面從 Kernel 層概觀 講到 WFP 隱藏流量，好文必須用力推一個
+好文必須用力推一個，我的這段 BYOVD 筆記也有引用他的闡述\
+而 Zeze 這份整個系列文章 從【第 1 話】 Kernel 層概觀\
+講到【第 30 話】 WFP 隱藏流量，很精采！推薦大家有興趣一定要去看 
 
 Refer : https://ithelp.ithome.com.tw/articles/10333769
 
