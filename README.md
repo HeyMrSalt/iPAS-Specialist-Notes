@@ -3,7 +3,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDeri
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-image]][cc-by-nc-nd]
 -->
 
-# iPAS資安工程師中級 | 防護實務衝刺班 | 證照筆記 | Ver.20250312 [![Hits](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes.svg)](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes/)
+# iPAS資安工程師中級 | 防護實務衝刺班 | 證照筆記 | Ver.20250320 [![Hits](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes.svg)](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes/)
 > 此 repository 為 iPAS 資安工程師 中級證照筆記。\
 > 範圍將著重在【防護實務】並以【歷屆難題與解析】與【資安重要專有名詞】方式呈現。
 
@@ -58,6 +58,8 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDeri
 - [【資安重要專有名詞】](#資安重要專有名詞)
   - [【資通安全事件通報流程】](#資通安全事件通報流程)
   - [【常見Port號】](#常見Port號)
+  - [【白箱黑箱】](#白箱黑箱)
+  - [【XaaS】](#XaaS)
   - [【SIEM vs IDS】](#SIEM-vs-IDS)
   - [【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
   - [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
@@ -391,8 +393,112 @@ Protect 功能的目的是開發和實施適當的保障措施,以確保關鍵�
 
 ## 112-2 中級 防護實務
 
+- [【Q1】](#112-2-Q1)
+- [【Q3】](#112-2-Q3)
 - [【Q18】](#112-2-Q18)
 - [【Q20】](#112-2-Q20)
+
+### 112-2-Q1
+關於 MITRE ATT&CK 中的橫向移動（Lateral Movement）戰術（Tactic），下列何項錯誤？\
+\
+(A) 遠端服務破解（Exploitation of Remote Services）屬於此類戰術\
+(B) 內部魚叉釣魚（Internal Spearphishing）屬於此類戰術\
+(C) 橫移工具傳輸（Lateral Tool Transfer）屬於此類戰術\
+(D) 本地資料取得（Data from Local System）屬於此類戰術\
+\
+Ans : (D)\
+\
+說明如下：
+
+MITRE ATT&CK 是一個由 MITRE Corporation（美國非營利性研究機構）所開發的公開資料庫，
+上面列出了攻擊者在不同階段（如初始存取、執行、橫向移動等）使用的戰術和技術，
+而這公開資料庫 目的是幫助資訊安全專業人員了解攻擊行為和設計防禦策略。
+
+MITRE ATT&CK 分為 TTPs 是用來描述攻擊者**欲達到之目的**以及**用到的手法、軟體與工具**
+下圖截至今 MITRE ATT&CK 上面的 橫向移動（Lateral Movement）戰術（Tactic）
+
+![Untitled](Appendix-img/MITRE_ATT&CK_Lateral_Movement_20250320.png) <br>
+▲ Fig.MITRE_ATT&CK_Lateral_Movement_20250320
+
+「橫向移動」戰術下的 9 項技術，分別是：
+
+1. **Exploitation of Remote Services** (遠端服務破解)\
+   攻擊者利用遠端服務（如 RDP、SSH）中的漏洞，取得對目標系統的未授權存取，進行滲透
+
+2. **Internal Spearphishing** (內部魚叉式網路釣魚)\
+   攻擊者以內部員工為目標，發動針對性魚叉式釣魚攻擊，獲取敏感資料或存取權限
+
+3. **Lateral Tool Transfer** (橫移工具傳輸)\
+   攻擊者將惡意工具或程式從一台系統移至另一台，協助進行橫向移動或擴展攻擊
+
+4. **Remote Service Session Hijacking** (遠端服務會話劫持)\
+   攻擊者劫持已建立的遠端服務會話，透過竊取會話憑證來繞過身份驗證，執行攻擊
+
+5. **Remote Services** (遠端服務)\
+   攻擊者利用遠端服務（如 RDP、VNC、SSH）連接到其他系統，控制並在內部網路擴展滲透
+
+6. **Replication Through Removable Media** (通過可移動媒體複製)\
+   攻擊者將惡意程式透過可移動媒體（如 USB）從一台設備複製到另一台，增加攻擊範圍
+
+7. **Software Deployment Tools** (軟體部署工具)\
+   利用內部合法的軟體部署工具，如 SCCM，分發惡意程式至多台機器，擴大攻擊面
+
+8. **Taint Shared Content** (污染共享內容)\
+   攻擊者在共享資料夾中植入惡意程式，當其他用戶訪問共享內容時，會被感染
+
+9. **Use Alternate Authentication Material** (使用替代身份驗證資料)\
+   攻擊者利用竊取的身份驗證資料或憑證（如 Kerberos 票證），獲得對系統的控制權
+
+裡面並沒有 本地資料取得（Data from Local System） 故選 (D)
+
+**但** 如果你像我一樣背不起來編號 也不知道有哪九個\
+那我們來看看 (D) 本地資料取得（Data from Local System）\
+本地資料取得 就是 攻擊者會搜尋本地系統來源，例如檔案系統和 config 或 本機db\
+以在洩漏之前找到感興趣的檔案和敏感資料，對手可能使用 cmd 或 CLI 來執行此操作\
+然而 這技術並不屬於「橫向移動」 的 而是屬於「收集」
+
+原因是因為 本地資料取得 意思是指攻擊者從目標系統或設備中提取或竊取資料的技術\
+然而這通常發生在攻擊者已經成功進入目標系統或網路並獲得一定的存取權限之後\
+所以是屬於 MITRE_ATT&CK 的「收集」（Collection）範疇，而不是 橫向移動（Lateral Movement）\
+故選 (D)
+
+---
+</br>
+
+### 112-2-Q3
+【複選】下列哪些攻擊手法可以透過遠端攻擊網路伺服器？\
+\
+(A) Ping Flooding\
+(B) DDoS\
+(C) 簡單配對攻擊（Secure Simple Pairing Attacks）\
+(D) Wi-Fi MITM\
+\
+Ans : (A) (B)\
+\
+說明如下：
+
+(A) (B) 我想就不多做說明了 算是很常見的 網路癱瘓攻擊\
+一個是 DoS 一個則是分散式的 DDoS 我想 A B 多數人應該沒疑慮\
+但 (C) (D) 就要補充一下了
+
+(C) **簡單配對攻擊**\
+指的是針對「藍牙」設備的一種攻擊方式，指在破解藍牙設備之間的配對過程\
+藍牙設備通常使用簡單配對（Secure Simple Pairing, SSP）來建立加密連接並確保通信的安全性\
+然而，在某些情況下，攻擊者可以利用藍牙協議中的漏洞來攔截或篡改配對過程，從而獲取設備的連接密鑰或破解加密通信\
+那當然 就能做到 **中間人攻擊**
+
+這類攻擊主要針對以下漏洞：
+- 暴力破解（Brute-Force Attack）：</br>攻擊者利用對配對**密鑰**的猜測來試圖破壞加密
+- 中間人攻擊（Man-in-the-Middle Attack, MITM）：</br>攻擊者介入配對過程，並有能力做到竊取或篡改配對過程中的密鑰交換，從而獲取設備控制權
+
+(D) **Wi-Fi MITM（Man-In-The-Middle）攻擊**\
+指的是攻擊者在 Wi-Fi 網絡中，通過偽造網路 AP（假 Wi-Fi 熱點），誘使用戶連接，並攔截、篡改用戶與路由器之間的通信\
+攻擊者的假 AP 通常與合法熱點的名稱相似，一旦用戶連接，攻擊者便能竊取或修改通信中的敏感信息，如帳號、密碼或其他私人資料
+
+瞭解 (C) (D) 後，這題即可果斷選擇 (A) (B)
+
+---
+</br>
 
 ### 112-2-Q18
 【題組2】【複選】情境如附圖所示,承上題,資安小組在設定災難恢復目標時,\
@@ -778,6 +884,8 @@ Ans : (C)\
 
 - [【資通安全事件通報流程】](#資通安全事件通報流程)
 - [【常見Port號】](#常見Port號)
+- [【白箱黑箱】](#白箱黑箱)
+- [【XaaS】](#XaaS)
 - [【SIEM vs IDS】](#SIEM-vs-IDS)
 - [【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
 - [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
@@ -840,6 +948,90 @@ Ans : (C)\
 
 > 紅字為個人評估必知項目，但最好全部都要瞭解\
 > 此外也額外補充這些Port可能面臨的風險以及相關安全資訊
+
+---
+</br>
+
+## 白箱黑箱
+> 已粗略整理成下表
+
+| 測試方法                                          | 定義                                                                      | 適用階段                                                     |
+|--------------------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------|
+| 白箱測試</br>（White-box Testing）                | 測試者擁有對應用程式內部結構、擁有 Source Code </br> 和運作邏輯的完全訪問權限  | 主要在開發早期進行，</br>協助開發人員修復缺陷或漏洞             |
+| 黑箱測試</br>（Black-box Testing）                | 測試者對應用程式的內部結構一無所知，</br>只關心其功能和輸出結果                | 適用於測試部署後的應用程式，</br>確保其在真實環境中的安全性      |
+| 灰箱測試</br>（Gray-box Testing）                 | 結合黑白箱測試，交互驗證其結果，</br>既模擬外部攻擊者，又利用部分內部資訊       | 適用於中後期的測試階段，</br>特別是在開發和測試團隊需合作之情況  |
+
+以下是關於 **白箱測試**、**黑箱測試**、**灰箱測試**，以及相關安全測試方法的整理表格：
+
+**其他相關測試：**
+
+- **靜態應用程式安全測試（SAST）**：
+  - **定義**：別名為白箱測試，在不執行程式的情況下，分析源代碼或二進位碼，以發現安全漏洞
+
+- **動態應用程式安全測試（DAST）**：
+  - **定義**：別名為黑箱測試，在應用程式運行時，模擬外部攻擊者的行為，測試其安全性
+
+- **互動式應用程式安全測試（IAST）**：
+  - **定義**：結合 SAST 和 DAST 的優點，在應用程式運行時進行動態監控，實時發現漏洞
+
+- **軟體組成分析（SCA）**：
+  - **定義**：分析應用程式中使用的開源和第三方 Lib庫，檢查其安全性
+
+在現代的 DevSecOps 流程中，綜合運用這些測試方法，並結合 IAST 和 SCA 等工具\
+能夠在應用程式的整個生命周期中持續進行安全檢測與監控，確保應用程式的安全性和可靠性
+
+#本筆記這處也有提到相關資訊 點擊查看更多學習資訊 [【SSDLC vs DevSecOps】](#SSDLC-vs-DevSecOps)
+
+---
+</br>
+
+## XaaS
+
+XaaS 把 X 當任意解讀... 所以就是 "Anything as a Service" 或 "Everything as a Service"\
+是一種雲端服務模式，涵蓋了各種透過網路提供的服務。以下是一些常見的 XaaS 類型：​
+
+1. **SaaS（Software as a Service，軟體即服務）**：</br>提供完整的應用程式服務，使用者無需安裝和維護軟體即可使用。</br>例如：Google Workspace、Dropbox、Salesforce 等
+
+2. **PaaS（Platform as a Service，平台即服務）**：</br>提供開發、測試和部署應用程式的平台，開發者可以在此環境中構建應用，而無需關心底層基礎設施。</br>例如：Google App Engine、Microsoft Azure 等
+
+3. **IaaS（Infrastructure as a Service，基礎設施即服務）**：</br>提供虛擬化的計算資源，如伺服器、儲存和網路，使用者可根據需求進行擴展。</br>例如：Amazon Web Services（AWS）、Google Cloud Platform 等
+
+4. **DaaS（Data as a Service，資料即服務）**：</br>提供資料存取和處理服務，使用者可以在雲端存取和分析資料。</br>例如：Snowflake、Oracle 等
+
+5. **NaaS（Network as a Service，網路即服務）**：</br>提供虛擬化的網路服務，包括虛擬專用網路（VPN）、帶寬按需等功能。</br>例如：Perimeter81 等
+
+6. **BaaS（Backend as a Service，後端即服務）**：</br>為行動應用程式開發者提供雲端後端服務，如資料儲存、用戶驗證等功能。</br>例如：Firebase、Parse 等
+
+7. **FaaS（Function as a Service，功能即服務）**：</br>允許開發者部署單一功能的雲端運算服務，通常用於事件驅動的應用程式。</br>例如：AWS Lambda、Google Cloud Functions 等
+
+8. **CaaS（Container as a Service，容器即服務）**：</br>提供容器管理和部署的雲端服務，方便開發者管理容器化應用。</br>例如：Google Kubernetes Engine、Amazon ECS 等
+
+9. **AIaaS（Artificial Intelligence as a Service，人工智慧即服務）**：</br>提供人工智慧和機器學習功能的雲端服務，使用者可利用這些服務進行資料分析和模型訓練。</br>例如：IBM Watson、Google AI 等
+
+10. **MaaS（Monitoring as a Service，監控即服務）**：</br>提供系統和應用程式監控的雲端服務，協助企業監測其基礎設施的運行狀態。</br>例如：Datadog、New Relic 等
+
+這些服務類型展示了 XaaS 模式的多樣性，企業和個人可以根據需求選擇適合的服務，以提高效率和降低成本
+
+另外還有 PhaaS 即 Phishing-as-a-Service（網路釣魚即服務）是詐騙集團會使用的一種 **新興的網路犯罪服務模式**\
+使得即使缺乏技術知識的犯罪分子也能輕易發起網路釣魚攻擊...
+
+**PhaaS 的運作方式：**
+
+- **服務提供**：</br>犯罪分子提供網路釣魚工具和服務，其他人可以購買或租用這些服務來發起攻擊
+- **降低技術門檻**：</br>傳統上，發起網路釣魚攻擊需要一定的技術知識，但 PhaaS 平台提供現成的模板和工具，讓技術能力有限的人也能輕鬆發動攻擊
+- **自動化攻擊**：</br>這些服務通常提供自動化功能，允許攻擊者批量發送釣魚郵件或建立釣魚網站，從而提高攻擊效率
+
+**防範 PhaaS 攻擊的建議：**
+
+- **員工培訓**：</br>定期對員工進行網路安全培訓，提高他們識別釣魚郵件的能力
+- **多因素驗證**：</br>啟用多因素驗證（MFA），即使帳號密碼被盜，攻擊者也難以入侵系統
+- **電子郵件過濾**：</br>使用先進的電子郵件過濾系統，攔截可疑的郵件內容和附件
+- **定期安全測試**：</br>進行定期的安全測試，如紅隊演練，模擬 PhaaS 攻擊，發現並修補潛在漏洞
+
+也確實，隨著 PhaaS 模式的興起，網路釣魚攻擊變得更加複雜和普遍。\
+除了企業 個人也需提高警覺，採取積極的防護措施，以應對這一日益嚴峻的威脅
+
+#本筆記這處也有提到相關資訊 點擊查看更多學習資訊 [【魚叉式網釣】](#魚叉式網釣)
 
 ---
 </br>
