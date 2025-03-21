@@ -3,7 +3,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDeri
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-image]][cc-by-nc-nd]
 -->
 
-# iPAS資安工程師中級 | 防護實務衝刺班 | 證照筆記 | Ver.20250320 [![Hits](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes.svg)](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes/)
+# iPAS資安工程師中級 | 防護實務衝刺班 | 證照筆記 | Ver.20250322 [![Hits](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes.svg)](https://hits.sh/github.com/heymrsalt/ipas-specialist-notes/)
 > 此 repository 為 iPAS 資安工程師 中級證照筆記。\
 > 範圍將著重在【防護實務】並以【歷屆難題與解析】與【資安重要專有名詞】方式呈現。
 
@@ -62,6 +62,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDeri
   - [【XaaS】](#XaaS)
   - [【SIEM vs IDS】](#SIEM-vs-IDS)
   - [【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
+  - [【Cyber Kill Chain】](#Cyber-Kill-Chain)
   - [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
   - [【DDoS攻擊種類之對應OSI層級】](#DDoS攻擊種類之對應OSI層級)
   - [【CVSS】](#CVSS)
@@ -893,6 +894,7 @@ Ans : (C)\
 - [【XaaS】](#XaaS)
 - [【SIEM vs IDS】](#SIEM-vs-IDS)
 - [【APT 名詞說明 以及 常用技術手法】](#APT-名詞說明-以及-常用技術手法)
+- [【Cyber Kill Chain】](#Cyber-Kill-Chain)
 - [【OWASP Top 10 的詳細解釋】](#OWASP-Top-10-的詳細解釋)
 - [【DDoS攻擊種類之對應OSI層級】](#DDoS攻擊種類之對應OSI層級)
 - [【CVSS】](#CVSS)
@@ -1132,6 +1134,21 @@ Refer : ChatGPT_o1
    實際攻擊過程可能視情況跳過某些步驟，或是在某個階段反覆執行多次<br>例如在橫向移動前就先蒐集大量憑證，也可能在已取得高權限後仍再度提權或蒐集不同帳號的憑證<br>
 
 總結，此圖僅為示意圖，實務上仍會依個案情境而略有不同。<br>
+
+---
+</br>
+
+## Cyber Kill Chain
+
+1. 偵查 Reconnaissance: <br>攻擊者收集目標對象的資料，如電子郵件信箱、社群平台的資料，以找到可以下手的弱點；或是透過工具，掃描目標對象的網站、系統，得知使用的系統種類、版本。
+2. 武裝 Weaponization: <br>攻擊者使用現成的開源工具或是自行開發專屬的惡意程式。
+3. 遞送 Delivery: <br>攻擊者將攻擊武器送入目標的系統內，如透過釣魚信件裡的連結、夾帶木馬的盜版軟體、隨身碟。
+4. 漏洞利用 Exploitation: <br>確保遞送的惡意軟體，藉由目標對象的系統漏洞，得以順利開啟，並使攻擊者獲得控制權。
+5. 安裝 Installation: <br>攻擊者確保自身可以長期控制目標的系統內，以有足夠的時間進行後續環節。
+6. 發令與控制 Command & Control: <br>本環節取兩個單字的字首，又可簡稱為 C2。攻擊者潛伏在目標的系統內，收集資料，探索環境，以便審慎規劃後續行動。
+7. 行動 Actions: <br>根據攻擊者的最終目標，採取行動，如破壞系統、竊取機密資料、勒索目標對象。
+
+Refer : https://teamt5.org/tw/posts/what-is-cyber-kill-chain
 
 ---
 </br>
