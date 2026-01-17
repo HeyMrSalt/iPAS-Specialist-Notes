@@ -7,6 +7,11 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDeri
 > 此 repository 為 iPAS 資安工程師 中級證照筆記。\
 > 範圍將著重在【防護實務】並以【歷屆難題與解析】與【資安重要專有名詞】方式呈現。
 
+## 近期考試與報名截止日期
+> 考試日期 2026/04/11 (六)\
+> 報名截止 2026/03/10 (二)\
+> 報名資訊 https://ipd.nat.gov.tw/ipas/certification/ISE/exam-registration
+
 ## Authors
 > 國立臺北科技大學 資安碩 [HeyMrSalt](https://github.com/HeyMrSalt) 🧂\
 > 國立臺北科技大學 資安碩 [WIFI](https://github.com/WIFI0000)\
